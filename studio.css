@@ -2,10 +2,10 @@
   :root {
     --bg: #010101;
     --text: #ffffff;
-    --subtext: #8f8f8f;
-    --linktext: #25bfd1;
+    --subtext: #08D9D6;
+    --linktext: #FF2E63;
     --underline: #444444;
-    --sectionbg: #1c1c1e;
+    --sectionbg: #252A34;
     --buttoncolor: #ffffff;
   }
 }
@@ -14,16 +14,16 @@
   :root {
     --bg: #f5f5f5;
     --text: #000000;
-    --subtext: #8f8f8f;
-    --linktext: #25bfd1;
+    --subtext: #08D9D6;
+    --linktext: #FF2E63;
     --underline: #dadada;
-    --sectionbg: #ffffff;
+    --sectionbg: #EAEAEA;
     --buttoncolor: #ffffff;
   }
 }
 
 body {
-  font-family: "Helvetica";
+  font-family: "Courier New";
   background-color: var(--bg);
   color: var(--text);
   display: flex;
@@ -41,10 +41,10 @@ body {
 }
 
 .header__title {
-  margin: 30px 0 10px 0;
-  font-size: 32px;
+  margin: auto;
+  font-size: 40px;
   line-height: 1.2;
-  font-family: "Helvetica Neue";
+  font-family: "Courier New";
 }
 
 .header__subtitle {
@@ -60,7 +60,7 @@ body {
 }
 
 .links__header {
-  font-family: "Helvetica Neue";
+  font-family: "Courier New";
   font-size: 24px;
   line-height: 1.4;
   margin: 0 0 15px 0;
@@ -130,9 +130,48 @@ footer {
   outline: none;
   
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
 
   color: var(--buttoncolor);
   text-decoration: none;
+}
+.button-link {
+    color: #252A34;
+    background: #08D9D6;
+    padding: 10px;
+    transition: 0.5s linear; 
+}
+.button-link:hover {
+    color: #EAEAEA;
+    background: #FF2E63;
+}
+.linsk__link {
+  color: #FF2E63;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+.linsk__link:after {
+  content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s;
+}
+
+.linsk__link:hover:after {
+  content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: #08D9D6;
+    transition: width 0.5s;
 }
